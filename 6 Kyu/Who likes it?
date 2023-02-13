@@ -1,0 +1,46 @@
+function likes(names) {
+    // TODO
+    if (names.length === 0) {
+      console.log("no one likes this");
+    } else if (names.length === 1) {
+      console.log(`${names[0]} likes this`);
+    } else if (names.length === 2) {
+        console.log(`${names[0]} and ${names[1]} like this`);
+    } else if (names.length === 3) {
+      console.log(`${names[0]}, ${names[1]} and ${names[2]} like this`);
+    } else {
+      console.log(`${names[0]}, ${names[1]} and ${names.length - 2} others like this`);
+    }          
+  };
+
+
+  likes([]);
+  likes(["billy", "kelly"]);
+  likes(["Teri-Anne", "Maria", "Kevin", "Leandro", "Sam"]);
+  
+  
+  /* **************************   TESTING SWITCH OPTION  ********************************** */
+
+function likey(namesM) {
+    namesM = namesM || [];
+    switch (namesM.length) {
+        case 0:
+            return `no one likes this`;
+            break;
+        case 1:
+            return `${namesM[0]} likes this`;
+            break;
+        case 2:
+            return `${namesM[0]} and ${namesM[1]} like this`;
+            break;
+        case 3:
+            return `${namesM[0]}, ${namesM[1]} and ${namesM[2]} like this`;
+            break;
+        default:
+            return `${namesM[0]}, ${namesM[1]} and ${namesM.length - 2} others like this`;
+    }
+}
+
+console.log(likey([]));
+console.log(likey(["billy", "kelly"]));
+console.log(likey(["Teri-Anne", "Maria", "Kevin", "Leandro", "Sam"]));
